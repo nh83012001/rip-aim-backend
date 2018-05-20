@@ -1,0 +1,616 @@
+Started GET "/" for ::1 at 2018-05-19 11:49:14 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/nickhall/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/nickhall/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (5.3ms)
+Completed 200 OK in 436ms (Views: 16.3ms)
+
+
+  [1m[35m (7.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (11.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (208.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cottageFoodBackend_development"[0m
+  [1m[35m (222.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rip-aim-backend_test"[0m
+  [1m[35m (24.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (10.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (211.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rip-aim-backend_development"[0m
+  [1m[35m (157.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rip-aim-backend_test"[0m
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6320697448944859155)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-20 16:57:05.235469"], ["updated_at", "2018-05-20 16:57:05.235469"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6320697448944859155)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6320697448944859155)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180520171337)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (38.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "firstname" character varying, "lastname" character varying, "email" character varying, "address" character varying, "phone" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180520171337"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6320697448944859155)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6320697448944859155)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPasswordColumn (20180520172157)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.8ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" character varying[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180520172157"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(6320697448944859155)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nick"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "firstname", "lastname", "email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "nick"], ["firstname", "Nick"], ["lastname", "Hall"], ["email", "nick@gmail.com"], ["created_at", "2018-05-20 17:24:29.209068"], ["updated_at", "2018-05-20 17:24:29.209068"], ["password_digest", "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7mQm7J1t6whG"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "carolyn"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "firstname", "lastname", "email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "carolyn"], ["firstname", "Carolyn"], ["lastname", "Commons"], ["email", "carolyn@gmail.com"], ["created_at", "2018-05-20 17:24:29.288160"], ["updated_at", "2018-05-20 17:24:29.288160"], ["password_digest", "$2a$10$6qZDoKiPBeA0QgobnKtlROB.0sQXRZ7UHo.JyosxfQnlXFPJcOsne"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6320697448944859155)[0m
+  [1m[35m (14.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAways (20180520175344)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (32.7ms)[0m  [1m[35mCREATE TABLE "aways" ("id" bigserial primary key, "user_id" integer, "message" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180520175344"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6320697448944859155)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nick"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "carolyn"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "aways" ("user_id", "message", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["message", "Not here now. Hit me up never"], ["created_at", "2018-05-20 18:05:47.283500"], ["updated_at", "2018-05-20 18:05:47.283500"]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "aways" ("user_id", "message", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["message", "Be back online tomorrow"], ["created_at", "2018-05-20 18:05:47.295838"], ["updated_at", "2018-05-20 18:05:47.295838"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "aways" ("user_id", "message", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["message", "Not here now. Hit me up never"], ["created_at", "2018-05-20 18:05:47.308242"], ["updated_at", "2018-05-20 18:05:47.308242"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "aways" ("user_id", "message", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["message", "Be back online never."], ["created_at", "2018-05-20 18:05:47.315470"], ["updated_at", "2018-05-20 18:05:47.315470"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mAway Load (0.9ms)[0m  [1m[34mSELECT  "aways".* FROM "aways" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mAway Load (0.8ms)[0m  [1m[34mSELECT  "aways".* FROM "aways" WHERE "aways"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+Started GET "/" for ::1 at 2018-05-20 13:03:55 -0600
+  [1m[35m (23.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/nickhall/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/nickhall/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (5.8ms)
+Completed 200 OK in 38ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user" for ::1 at 2018-05-20 13:04:08 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/users" for ::1 at 2018-05-20 13:04:22 -0600
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.97ms)
+Completed 200 OK in 68ms (Views: 34.5ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-05-20 13:04:38 -0600
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.6ms)
+Completed 200 OK in 15ms (Views: 7.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/users/1/away" for ::1 at 2018-05-20 13:04:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/users/1/away"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/api/v1/current_user" for ::1 at 2018-05-20 14:01:10 -0600
+Started GET "/api/v1/users" for ::1 at 2018-05-20 14:01:11 -0600
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::SessionsController#show as JSON
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyNn0.5YW3geJV99xFHfUOidlpslUnLyxD9uEL4_TDlnpTOvA", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyNn0.5YW3geJV99xFHfUOidlpslUnLyxD9uEL4_TDlnpTOvA"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.81ms)
+Completed 200 OK in 79ms (Views: 46.9ms | ActiveRecord: 7.4ms)
+
+
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+Completed 404 Not Found in 74ms (ActiveRecord: 30.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=26):
+  
+app/controllers/application_controller.rb:17:in `current_user'
+app/controllers/api/v1/sessions_controller.rb:6:in `show'
+Started POST "/api/v1/current_user" for ::1 at 2018-05-20 14:01:22 -0600
+Processing by Api::V1::SessionsController#show as JSON
+Started GET "/api/v1/users" for ::1 at 2018-05-20 14:01:22 -0600
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyNn0.5YW3geJV99xFHfUOidlpslUnLyxD9uEL4_TDlnpTOvA", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyNn0.5YW3geJV99xFHfUOidlpslUnLyxD9uEL4_TDlnpTOvA"}}
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+Completed 404 Not Found in 24ms (ActiveRecord: 11.4ms)
+
+
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=26):
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.59ms)
+  
+Completed 200 OK in 26ms (Views: 12.0ms | ActiveRecord: 13.7ms)
+
+
+app/controllers/application_controller.rb:17:in `current_user'
+app/controllers/api/v1/sessions_controller.rb:6:in `show'
+Started POST "/api/v1/auth" for ::1 at 2018-05-20 14:01:27 -0600
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"username"=>"nick", "password"=>"[FILTERED]", "session"=>{"username"=>"nick", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nick"], ["LIMIT", 1]]
+Completed 200 OK in 89ms (Views: 6.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-05-20 14:01:27 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.54ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2018-05-20 14:04:16 -0600
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"John", "password"=>"[FILTERED]", "firstname"=>"John", "lastname"=>"Hawkins", "email"=>"", "address"=>"", "phone"=>"", "zip"=>"", "city"=>"", "state"=>"", "user"=>{"username"=>"John", "firstname"=>"John", "lastname"=>"Hawkins", "email"=>"", "address"=>"", "phone"=>""}}
+Completed 500 Internal Server Error in 172ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/api/v1/users_controller.rb:18:in `create'
+Started GET "/api/v1/users/undefined" for ::1 at 2018-05-20 14:04:17 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 5ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/api/v1/users_controller.rb:9:in `show'
+Started POST "/api/v1/auth" for ::1 at 2018-05-20 14:04:21 -0600
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"username"=>"John", "password"=>"[FILTERED]", "session"=>{"username"=>"John", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "John"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/auth" for ::1 at 2018-05-20 14:04:53 -0600
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"username"=>"john", "password"=>"[FILTERED]", "session"=>{"username"=>"john", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "john"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 8ms (Views: 0.9ms | ActiveRecord: 2.5ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/auth" for ::1 at 2018-05-20 14:06:20 -0600
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"username"=>"carolyn", "password"=>"[FILTERED]", "session"=>{"username"=>"carolyn", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "carolyn"], ["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 0.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/users/2" for ::1 at 2018-05-20 14:06:20 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.39ms)
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/auth" for ::1 at 2018-05-20 14:06:28 -0600
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"username"=>"nick", "password"=>"[FILTERED]", "session"=>{"username"=>"nick", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nick"], ["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-05-20 14:06:28 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.4ms)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2018-05-20 14:16:41 -0600
+Processing by Api::V1::UsersController#index as */*
+Started POST "/api/v1/current_user" for ::1 at 2018-05-20 14:16:41 -0600
+Processing by Api::V1::SessionsController#show as JSON
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ"}}
+  [1m[36mUser Load (47.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (3.31ms)
+Completed 200 OK in 60ms (Views: 10.7ms | ActiveRecord: 47.6ms)
+
+
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.07ms)
+Completed 200 OK in 76ms (Views: 23.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-05-20 14:16:41 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.55ms)
+Completed 200 OK in 9ms (Views: 2.4ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2018-05-20 14:16:53 -0600
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"john", "password"=>"[FILTERED]", "firstname"=>"john", "lastname"=>"h", "email"=>"", "address"=>"", "phone"=>"", "zip"=>"", "city"=>"", "state"=>"", "user"=>{"username"=>"john", "firstname"=>"john", "lastname"=>"h", "email"=>"", "address"=>"", "phone"=>""}}
+Completed 500 Internal Server Error in 278ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/api/v1/users_controller.rb:18:in `create'
+Started GET "/api/v1/users/undefined" for ::1 at 2018-05-20 14:16:54 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/api/v1/users_controller.rb:9:in `show'
+Started POST "/api/v1/auth" for ::1 at 2018-05-20 14:16:58 -0600
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"username"=>"john", "password"=>"[FILTERED]", "session"=>{"username"=>"john", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "john"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2018-05-20 14:18:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/users" for ::1 at 2018-05-20 14:18:38 -0600
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.53ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2018-05-20 14:23:24 -0600
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"abcd", "password"=>"[FILTERED]", "firstname"=>"abcd", "lastname"=>"abcd", "email"=>"", "address"=>"", "phone"=>"", "zip"=>"", "city"=>"", "state"=>"", "user"=>{"username"=>"abcd", "firstname"=>"abcd", "lastname"=>"abcd", "email"=>"", "address"=>"", "phone"=>""}}
+Started POST "/api/v1/users" for ::1 at 2018-05-20 14:24:04 -0600
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "abcd"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "firstname", "lastname", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "abcd"], ["firstname", "abcd"], ["lastname", "abcd"], ["created_at", "2018-05-20 20:24:04.631829"], ["updated_at", "2018-05-20 20:24:04.631829"], ["password_digest", "$2a$10$xEVdN0hC7mJGtNvAak3WPOJ0McJYMcUo.hnbjbqwz/YfSKfjPA4q2"]]
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 100061ms (ActiveRecord: 55.3ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/api/v1/users_controller.rb:15:in `create'
+Started GET "/api/v1/users" for ::1 at 2018-05-20 14:25:06 -0600
+Processing by Api::V1::UsersController#index as HTML
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"abcd", "password"=>"[FILTERED]", "firstname"=>"abcd", "lastname"=>"abcd", "email"=>"", "address"=>"", "phone"=>"", "zip"=>"", "city"=>"", "state"=>"", "user"=>{"username"=>"abcd", "firstname"=>"abcd", "lastname"=>"abcd", "email"=>"", "address"=>"", "phone"=>""}}
+Started GET "/api/v1/users" for ::1 at 2018-05-20 14:25:43 -0600
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.27ms)
+Completed 200 OK in 74ms (Views: 44.7ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2018-05-20 14:25:58 -0600
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"efgh", "password"=>"[FILTERED]", "firstname"=>"efgh", "lastname"=>"efgh", "email"=>"", "address"=>"", "phone"=>"", "zip"=>"", "city"=>"", "state"=>"", "user"=>{"username"=>"efgh", "firstname"=>"efgh", "lastname"=>"efgh", "email"=>"", "address"=>"", "phone"=>""}}
+Started POST "/api/v1/users" for ::1 at 2018-05-20 14:29:28 -0600
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"jordan", "password"=>"[FILTERED]", "firstname"=>"jordan", "lastname"=>"jordan", "user"=>{"username"=>"jordan", "firstname"=>"jordan", "lastname"=>"jordan"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jordan"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "firstname", "lastname", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "jordan"], ["firstname", "jordan"], ["lastname", "jordan"], ["created_at", "2018-05-20 20:29:28.980744"], ["updated_at", "2018-05-20 20:29:28.980744"], ["password_digest", "$2a$10$H181uSDgCvrE7TLgeaXcgu8BeSrefUzPxoKAtk42oRmtI338uIO4e"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 127ms (Views: 11.8ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/api/v1/users/undefined" for ::1 at 2018-05-20 14:29:29 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 9ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/api/v1/users_controller.rb:9:in `show'
+Started POST "/api/v1/auth" for ::1 at 2018-05-20 14:29:35 -0600
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"username"=>"jordan", "password"=>"[FILTERED]", "session"=>{"username"=>"jordan", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jordan"], ["LIMIT", 1]]
+Completed 200 OK in 84ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/users/4" for ::1 at 2018-05-20 14:29:36 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.57ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2018-05-20 14:43:58 -0600
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (3.97ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/v1/current_user" for ::1 at 2018-05-20 14:43:58 -0600
+Processing by Api::V1::SessionsController#show as JSON
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0fQ.P0ri61O_mYQ5fqW5G6F0kCHhL3qI_hti3rjaKW552pM", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0fQ.P0ri61O_mYQ5fqW5G6F0kCHhL3qI_hti3rjaKW552pM"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.08ms)
+Completed 200 OK in 16ms (Views: 11.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/users/4" for ::1 at 2018-05-20 14:43:58 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.74ms)
+Completed 200 OK in 11ms (Views: 1.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/v1/current_user" for ::1 at 2018-05-20 14:44:07 -0600
+Started GET "/api/v1/users" for ::1 at 2018-05-20 14:44:07 -0600
+Processing by Api::V1::SessionsController#show as JSON
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0fQ.P0ri61O_mYQ5fqW5G6F0kCHhL3qI_hti3rjaKW552pM", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0fQ.P0ri61O_mYQ5fqW5G6F0kCHhL3qI_hti3rjaKW552pM"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (2.48ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.07ms)
+Completed 200 OK in 333ms (Views: 1.1ms | ActiveRecord: 24.8ms)
+
+
+Started GET "/api/v1/users/4" for ::1 at 2018-05-20 14:44:08 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.7ms)
+Completed 200 OK in 15ms (Views: 1.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/v1/current_user" for ::1 at 2018-05-20 14:45:10 -0600
+Processing by Api::V1::SessionsController#show as JSON
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0fQ.P0ri61O_mYQ5fqW5G6F0kCHhL3qI_hti3rjaKW552pM", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0fQ.P0ri61O_mYQ5fqW5G6F0kCHhL3qI_hti3rjaKW552pM"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.06ms)
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2018-05-20 14:45:10 -0600
+Processing by Api::V1::UsersController#index as */*
+Started GET "/api/v1/users/4" for ::1 at 2018-05-20 14:45:10 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.85ms)
+Completed 200 OK in 21ms (Views: 1.5ms | ActiveRecord: 3.3ms)
+
+
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (2.27ms)
+Completed 200 OK in 174ms (Views: 168.6ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/api/v1/auth" for ::1 at 2018-05-20 14:45:50 -0600
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"username"=>"nick", "password"=>"[FILTERED]", "session"=>{"username"=>"nick", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nick"], ["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 0.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-05-20 14:45:50 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.48ms)
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/current_user" for ::1 at 2018-05-20 14:47:25 -0600
+Started GET "/api/v1/users" for ::1 at 2018-05-20 14:47:25 -0600
+Processing by Api::V1::SessionsController#show as JSON
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.06ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (2.38ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.4ms)
+
+
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-05-20 14:47:25 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.68ms)
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/v1/auth" for ::1 at 2018-05-20 14:47:32 -0600
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"username"=>"carolyn", "password"=>"[FILTERED]", "session"=>{"username"=>"carolyn", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "carolyn"], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/users/2" for ::1 at 2018-05-20 14:47:32 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.98ms)
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+
+

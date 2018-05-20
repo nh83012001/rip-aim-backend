@@ -5,7 +5,17 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+gem 'active_model_serializers'
+gem 'rack-cors'
+gem 'httparty'
+gem 'http'
+gem 'pry'
+gem 'json'
+gem 'require_all'
+gem 'bcrypt', '~> 3.1.7', platforms: :ruby
+gem 'jwt'
+gem 'pg', '~> 0.18'
+gem 'figaro'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
 # Use sqlite3 as the database for Active Record
