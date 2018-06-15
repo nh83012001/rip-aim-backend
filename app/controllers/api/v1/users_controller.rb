@@ -6,7 +6,15 @@ class Api::V1::UsersController < ActionController::API
   end
 
   def show
-    @user= User.find(params[:id])
+    @user = User.find(params[:id])
+     =  ENV["TWITTER_API_KEY"]
+     =  ENV["TWITTER_API_SECRET"]
+     =  ENV["TWITTER_API_ACCESS_TOKEN"]
+     =  ENV["TWITTER_API_ACCESS_TOKEN_SECRET"]
+
+    @route = "https://maps.googleapis.com/maps/api/geocode/json?address=#{@address}&key=#{@apiKey}"
+    response = HTTParty.get(@route)
+
     render json: {current_user: @user}
   end
 
@@ -24,6 +32,6 @@ class Api::V1::UsersController < ActionController::API
   private
 
   def user_params
-    params.require(:user).permit(:username, :firstname, :lastname, :password, :email, :zip, :address, :phone, :city, :state, :longitude, :latitude )
+    params.require(:user).permit(:username, :firstname, :lastname, :password )
   end
 end
