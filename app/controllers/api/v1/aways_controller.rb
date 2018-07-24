@@ -1,4 +1,4 @@
-class Api::V1::AwayssController < ActionController::API
+class Api::V1::AwaysController < ActionController::API
   def index
     @aways = Away.all
     render json: @aways

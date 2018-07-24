@@ -719,3 +719,542 @@ No serializer found for resource: #<User id: 1, username: "nick", firstname: "Ni
 Completed 200 OK in 115ms (Views: 73.5ms | ActiveRecord: 25.5ms)
 
 
+Started GET "/api/v1/users" for ::1 at 2018-06-14 22:15:18 -0600
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/nickhall/twitter-projects/rip-aim-backend/app/controllers/api/v1/users_controller.rb:10: syntax error, unexpected '=', expecting keyword_end
+     =  ENV["TWITTER_API_KEY"]
+      ^
+/Users/nickhall/twitter-projects/rip-aim-backend/app/controllers/api/v1/users_controller.rb:11: syntax error, unexpected '=', expecting keyword_end
+     =  ENV["TWITTER_API_SECRET"]
+      ^
+/Users/nickhall/twitter-projects/rip-aim-backend/app/controllers/api/v1/users_controller.rb:12: syntax error, unexpected '=', expecting keyword_end
+     =  ENV["TWITTER_API_ACCESS_TOKE
+      ^
+/Users/nickhall/twitter-projects/rip-aim-backend/app/controllers/api/v1/users_controller.rb:13: syntax error, unexpected '=', expecting keyword_end
+     =  ENV["TWITTER_API_ACCESS_TOKE
+      ^):
+  
+app/controllers/api/v1/users_controller.rb:10: syntax error, unexpected '=', expecting keyword_end
+app/controllers/api/v1/users_controller.rb:11: syntax error, unexpected '=', expecting keyword_end
+app/controllers/api/v1/users_controller.rb:12: syntax error, unexpected '=', expecting keyword_end
+app/controllers/api/v1/users_controller.rb:13: syntax error, unexpected '=', expecting keyword_end
+Started GET "/api/v1/users" for ::1 at 2018-06-14 22:15:52 -0600
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (27.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.01ms)
+Completed 200 OK in 101ms (Views: 40.2ms | ActiveRecord: 49.7ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2018-07-23 19:57:17 -0600
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (30.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.11ms)
+Completed 200 OK in 111ms (Views: 30.1ms | ActiveRecord: 56.8ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:07:59 -0600
+  
+SyntaxError (/Users/nickhall/twitter-projects/rip-aim-backend/app/controllers/api/v1/users_controller.rb:16: syntax error, unexpected =>
+token_hash = { oauth_token: => OA_TOKEN, oauth_token_secret:
+                              ^
+/Users/nickhall/twitter-projects/rip-aim-backend/app/controllers/api/v1/users_controller.rb:16: dynamic constant assignment
+ = { oauth_token: => OA_TOKEN, oauth_token_secret: => OA_SEC
+                              ^):
+  
+app/controllers/api/v1/users_controller.rb:16: syntax error, unexpected =>
+app/controllers/api/v1/users_controller.rb:16: dynamic constant assignment
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:09:26 -0600
+  
+SyntaxError (/Users/nickhall/twitter-projects/rip-aim-backend/app/controllers/api/v1/users_controller.rb:16: syntax error, unexpected =>
+token_hash = { oauth_token: => OA_TOKEN, oauth_token_secret:
+                              ^
+/Users/nickhall/twitter-projects/rip-aim-backend/app/controllers/api/v1/users_controller.rb:16: dynamic constant assignment
+ = { oauth_token: => OA_TOKEN, oauth_token_secret: => OA_SEC
+                              ^):
+  
+app/controllers/api/v1/users_controller.rb:16: syntax error, unexpected =>
+app/controllers/api/v1/users_controller.rb:16: dynamic constant assignment
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:09:28 -0600
+  
+SyntaxError (/Users/nickhall/twitter-projects/rip-aim-backend/app/controllers/api/v1/users_controller.rb:16: syntax error, unexpected =>
+token_hash = { oauth_token: => OA_TOKEN, oauth_token_secret:
+                              ^
+/Users/nickhall/twitter-projects/rip-aim-backend/app/controllers/api/v1/users_controller.rb:16: dynamic constant assignment
+ = { oauth_token: => OA_TOKEN, oauth_token_secret: => OA_SEC
+                              ^):
+  
+app/controllers/api/v1/users_controller.rb:16: syntax error, unexpected =>
+app/controllers/api/v1/users_controller.rb:16: dynamic constant assignment
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:16:56 -0600
+  
+LoadError (cannot load such file -- oauth):
+  
+app/controllers/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:17:35 -0600
+  
+NameError (uninitialized constant Api::V1::UsersController::OAuth):
+  
+app/controllers/api/v1/users_controller.rb:17:in `initialize'
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:20:13 -0600
+  
+NameError (uninitialized constant Api::V1::UsersController::OAuth):
+  
+app/controllers/api/v1/users_controller.rb:17:in `initialize'
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:20:15 -0600
+  
+NameError (uninitialized constant Api::V1::UsersController::OAuth):
+  
+app/controllers/api/v1/users_controller.rb:17:in `initialize'
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:20:19 -0600
+  
+LoadError (cannot load such file -- oauth):
+  
+app/controllers/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:22:10 -0600
+  [1m[35m (8.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NameError (undefined local variable or method `oauth_token' for #<Api::V1::UsersController:0x007fd7591a0f30>
+Did you mean?  @oauth_token):
+  
+app/controllers/api/v1/users_controller.rb:19:in `initialize'
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:22:35 -0600
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.06ms)
+Completed 200 OK in 52ms (Views: 28.7ms | ActiveRecord: 8.6ms)
+
+
+Started POST "/api/v1/auth" for ::1 at 2018-07-23 21:36:08 -0600
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"username"=>"nick", "password"=>"[FILTERED]", "session"=>{"username"=>"nick", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (13.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nick"], ["LIMIT", 1]]
+Completed 200 OK in 156ms (Views: 7.0ms | ActiveRecord: 23.6ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-07-23 21:36:09 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.95ms)
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:50:39 -0600
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (2.15ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/current_user" for ::1 at 2018-07-23 21:50:39 -0600
+Processing by Api::V1::SessionsController#show as JSON
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.06ms)
+Completed 200 OK in 20ms (Views: 9.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-07-23 21:50:39 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.87ms)
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/v1/current_user" for ::1 at 2018-07-23 21:51:03 -0600
+Processing by Api::V1::SessionsController#show as JSON
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ"}}
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:51:03 -0600
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.08ms)
+Completed 200 OK in 7ms (Views: 1.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-07-23 21:51:03 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.04ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.56ms)
+Completed 200 OK in 71ms (Views: 44.4ms | ActiveRecord: 26.3ms)
+
+
+Started POST "/api/v1/current_user" for ::1 at 2018-07-23 21:52:22 -0600
+Processing by Api::V1::SessionsController#show as JSON
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ"}}
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:52:22 -0600
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.05ms)
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 1.7ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (2.07ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-07-23 21:52:22 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.59ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/current_user" for ::1 at 2018-07-23 21:53:45 -0600
+Processing by Api::V1::SessionsController#show as JSON
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:53:45 -0600
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ"}}
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.53ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.04ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.8ms)
+
+
+Completed 200 OK in 8ms (Views: 1.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-07-23 21:53:45 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.92ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/current_user" for ::1 at 2018-07-23 21:55:06 -0600
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:55:06 -0600
+Processing by Api::V1::SessionsController#show as JSON
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.07ms)
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.6ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.67ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-07-23 21:55:06 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (11.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.28ms)
+Completed 200 OK in 21ms (Views: 2.1ms | ActiveRecord: 11.5ms)
+
+
+Started POST "/api/v1/current_user" for ::1 at 2018-07-23 21:56:36 -0600
+Processing by Api::V1::SessionsController#show as JSON
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ"}}
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:56:36 -0600
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.04ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.9ms)
+
+
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.35ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-07-23 21:56:36 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.63ms)
+Completed 200 OK in 78ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/current_user" for ::1 at 2018-07-23 21:57:01 -0600
+Processing by Api::V1::SessionsController#show as JSON
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ"}}
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:57:01 -0600
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.08ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.7ms)
+
+
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (2.17ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-07-23 21:57:01 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.62ms)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/v1/current_user" for ::1 at 2018-07-23 21:57:33 -0600
+Processing by Api::V1::SessionsController#show as JSON
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:57:33 -0600
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ"}}
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.07ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+
+
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.08ms)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-07-23 21:57:33 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.58ms)
+Completed 200 OK in 7ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/v1/current_user" for ::1 at 2018-07-23 21:57:46 -0600
+Processing by Api::V1::SessionsController#show as JSON
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:57:46 -0600
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ"}}
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.05ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.79ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-07-23 21:57:46 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.68ms)
+Completed 200 OK in 30ms (Views: 1.4ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/api/v1/current_user" for ::1 at 2018-07-23 21:57:52 -0600
+Processing by Api::V1::SessionsController#show as JSON
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ"}}
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:57:52 -0600
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.05ms)
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.87ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-07-23 21:57:52 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.55ms)
+Completed 200 OK in 12ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/current_user" for ::1 at 2018-07-23 21:58:25 -0600
+Processing by Api::V1::SessionsController#show as JSON
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ"}}
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:58:25 -0600
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.05ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 1.0ms)
+
+
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.59ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-07-23 21:58:25 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.06ms)
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/current_user" for ::1 at 2018-07-23 21:58:49 -0600
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:58:49 -0600
+Processing by Api::V1::SessionsController#show as JSON
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ"}}
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.07ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (2.04ms)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-07-23 21:58:49 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.89ms)
+Completed 200 OK in 41ms (Views: 1.6ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/api/v1/current_user" for ::1 at 2018-07-23 21:58:56 -0600
+Processing by Api::V1::SessionsController#show as JSON
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ"}}
+Started GET "/api/v1/users" for ::1 at 2018-07-23 21:58:56 -0600
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.06ms)
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.91ms)
+Completed 200 OK in 9ms (Views: 4.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-07-23 21:58:56 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.76ms)
+Completed 200 OK in 9ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/auth" for ::1 at 2018-07-23 21:59:18 -0600
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"username"=>"nick", "password"=>"[FILTERED]", "session"=>{"username"=>"nick", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nick"], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-07-23 21:59:18 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.42ms)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2018-07-23 22:08:49 -0600
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.73ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/v1/current_user" for ::1 at 2018-07-23 22:08:49 -0600
+Processing by Api::V1::SessionsController#show as JSON
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.06ms)
+Completed 200 OK in 11ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-07-23 22:08:49 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.94ms)
+Completed 200 OK in 21ms (Views: 1.6ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/api/v1/auth" for ::1 at 2018-07-23 22:10:32 -0600
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"username"=>"nick", "password"=>"[FILTERED]", "session"=>{"username"=>"nick", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nick"], ["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 0.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-07-23 22:10:32 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.5ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/current_user" for ::1 at 2018-07-23 22:11:42 -0600
+Started GET "/api/v1/users" for ::1 at 2018-07-23 22:11:42 -0600
+Processing by Api::V1::SessionsController#show as JSON
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.04ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.16ms)
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-07-23 22:11:42 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.58ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2018-07-23 22:19:50 -0600
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, username: "nick", firstname: "Nick", lastname: "Hall", email: "nick@gmail.com", address: nil, phone: nil, created_at: "2018-05-20 17:24:29", updated_at: "2018-05-20 17:24:29", password_digest: "$2a$10$DsNtUeYFKSBdGf/NPlqcnORGHX6e3l6lxBgxCOpta7m...">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.57ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/v1/current_user" for ::1 at 2018-07-23 22:19:50 -0600
+Processing by Api::V1::SessionsController#show as JSON
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ", "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ"}}
+  [1m[36mUser Load (32.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.06ms)
+Completed 200 OK in 107ms (Views: 1.1ms | ActiveRecord: 32.9ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2018-07-23 22:19:51 -0600
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.53ms)
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 2.0ms)
+
+
