@@ -1,10 +1,15 @@
-nick = User.create(username: "nick", firstname: "Nick", lastname: "Hall", password: "nick", email: "nick@gmail.com")
-carolyn = User.create(username: "carolyn", firstname: "Carolyn", lastname: "Commons", password: "carolyn", email: "carolyn@gmail.com")
+# nick = User.create(username: "nick", firstname: "Nick", lastname: "Hall", password: "nick", email: "nick@gmail.com")
+# carolyn = User.create(username: "carolyn", firstname: "Carolyn", lastname: "Commons", password: "carolyn", email: "carolyn@gmail.com")
+#
+# away1 = Away.create(user_id:1, message: "Not here now. Hit me up never")
+# away2 = Away.create(user_id:1, message: "Be back online tomorrow")
+# away3 = Away.create(user_id:2, message: "Not here now. Hit me up never")
+# away4 = Away.create(user_id:2, message: "Be back online never.")
 
-message1 = Away.create(user_id:1, message: "Not here now. Hit me up never")
-message2 = Away.create(user_id:1, message: "Be back online tomorrow")
-message3 = Away.create(user_id:2, message: "Not here now. Hit me up never")
-message4 = Away.create(user_id:2, message: "Be back online never.")
+message1 = Message.create(receiver_id:1, sender_id:2, message: "Here is an awesome cat video!")
+
+
+
 # nick = User.create(username: "nick", firstname: "Nick", lastname: "Hall", password: "nick", email: "nickhall122@gmail.com", address: "1234 Abc Street", phone: "317-294-6339", city: "New York", state: "NY", latitude: 40.748541, longitude: -73.985763)
 # carolyn = User.create(username: "carolyn", firstname: "Carolyn", lastname: "Commons", password: "carolyn", email: "carolyn@gmail.com", address: "1234 Abc Street", phone: "317-436-1839", city: "New York", state: "NY", latitude: 40.734229, longitude: -74.006316)
 # alex = User.create(username: "alex", firstname: "Alex", lastname: "Griff", password: "alex", email: "alex@gmail.com", address: "1234 Abc Street", phone: "123-456-7890", city: "New York", state: "NY", latitude: 40.734829, longitude: -73.999454)

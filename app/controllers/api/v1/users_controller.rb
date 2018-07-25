@@ -21,7 +21,8 @@ class Api::V1::UsersController < ActionController::API
   end
 
   def query(method_name, path, options=nil)
-    JSON.parse(@access_token.request(method_name, "#{BASE_URI}#{path}",options).body)
+    @query_response = JSON.parse(@access_token.request(method_name, "#{BASE_URI}#{path}",options).body)
+
   end
 
   def home_line
@@ -33,27 +34,24 @@ class Api::V1::UsersController < ActionController::API
   end
 
   def method_name
-
   end
 
 
 
   def index
+    binding.pry
     @users = User.all
     render json: @users
   end
 
   def show
+    binding.pry
     @user = User.find(params[:id])
-
-
-    # @route = "https://maps.googleapis.com/maps/api/geocode/json?address=#{@address}&key=#{@apiKey}"
-    # response = HTTParty.get(@route)
-
     render json: {current_user: @user}
   end
 
   def create
+    binding.pry
     @user = User.create(username: params[:username], password: params[:password], firstname: params[:firstname], lastname: params[:lastname] )
     render json: @user.to_json
   end
@@ -61,7 +59,6 @@ class Api::V1::UsersController < ActionController::API
   def update
     @user = User.find(params[:id])
     @user.update(user_params)
-
   end
 
   private
